@@ -1,0 +1,737 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    position: relative;
+    background: linear-gradient(90deg, hsl(13, 100%, 72%, 0.9) 0%, hsl(353, 100%, 62%, 0.9) 100%), url(images/bg-pattern-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center center, -30vw center;
+    background-size: 200%;
+    height: 80vh;
+    
+    padding-top: 50px;
+
+    border-radius: 0 0 0 100px;
+}
+
+header p {
+    color: hsl(0, 0%, 100%, 0.7);
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+}
+
+.top-bar {
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hamburger {
+    display: none;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    right: 0;
+
+    transform: translateY(-50%);
+}
+
+.hamburger .open {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hamburger .close {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/icon-close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    padding-left: 150px;
+    width: 100%;
+}
+
+.dropdown {
+    background: url(images/icon-arrow-light.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-left: 20px;
+}
+
+.dropdown:hover {
+    background: url(images/arrow-close.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-left: 20px;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropbtn {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    color: hsl(0, 0%, 100%, 0.7);
+    margin-left: 10px;
+    padding: 30px 0;
+    padding-right: 20px;
+}
+
+.dropbtn:hover {
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.dropdown-content {
+    width: 150px;
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px 0px 10px 20px;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    margin: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(207, 13%, 34%);
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    font-weight: 700;
+}
+
+.sign-up {
+    position: absolute;
+    top: 50%;
+    right: 200px;
+    transform: translateY(-50%);
+    float: right;
+}
+
+.sign-up a, .start a {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: hsl(0, 0%, 100%, 0.7);
+    text-decoration: none;
+    padding: 10px 30px;
+}
+
+.sign-up a:hover,
+.start a:hover {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(355, 100%, 74%);
+    border-radius: 20px;
+    border: none;
+}
+
+.start {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.start a {
+    font-weight: 500;
+    margin: 0 20px;
+    color: hsl(0, 0%, 100%);
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 30px;
+}
+
+.start .active,
+.start a:active {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(356, 100%, 66%);
+}
+
+section {
+    margin: 0;
+}
+
+.editor {
+   height: 100vh;
+   position: relative;
+   margin: 100px 0;
+   
+   overflow: hidden;
+}
+
+.editor div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.editor-left {
+    position: absolute;
+    left: 200px;
+    width: 40%;
+}
+
+.editor-right {
+    position: absolute;
+    right: -18%;
+}
+
+.editor h2 {
+    text-align: center;
+}
+
+.editor p {
+    font-family: 'Overpass', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: hsl(207, 13%, 34%);
+}
+
+.chart {
+    position: absolute;
+    top: 50%;
+    right: -20%;
+    transform: translateY(-50%);
+}
+
+.introduction {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.editor img {
+    width: 100%;
+}
+
+.phones {
+    padding-top: 200px;
+    position: relative;
+}
+
+.state {
+    display: flex;
+
+    background: linear-gradient(90deg, hsl(237, 17%, 21%, 0.95) 0%, hsl(237, 23%, 32%, 0.95) 100%), url(images/bg-pattern-circles-w.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0, -50% 100%;
+    background-size: 100%, 70%;
+    border-radius: 0 100px 0 100px;
+
+    padding-left: 100px;
+    padding-right: 200px;
+}
+
+.state-left {
+    position: absolute;
+    top: 0;
+}
+
+.state-left img {
+    width: 100%;
+}
+
+.state-right {
+    margin: 100px 0;
+    margin-left: 50%;
+}
+
+.state h2, .state p {
+    color: hsl(0, 0%, 100%);
+}
+
+.state p {
+    font-size: 18px;
+}
+
+.laptop {
+    position: relative;
+    height: auto;
+    margin: 50px 0;
+    padding: 0;
+    height: 100vh;
+    
+}
+
+.laptop div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);  
+}
+
+.laptop-left {
+    position: absolute;
+    left: -18%;
+}
+
+.laptop-right {
+    position: absolute;
+    right: 200px;
+    width: 40%;
+}
+
+.laptop h3, .laptop p {
+    margin: 0;
+}
+
+.laptop h3 {
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.laptop p {
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+
+footer {
+    display: flex;
+    height: 50vh;
+    background-color: hsl(240, 10%, 16%);
+    border-radius: 0 100px 0 0;
+    padding: 100px 200px 100px 200px;
+    padding-bottom: 0;
+}
+
+.site-map {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.site-map ul span {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.site-map ul { 
+    font-family: 'Ubuntu', sans-serif;
+    color: hsl(0, 0%, 100%);
+    list-style: none;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+.site-map li {
+    margin: 20px 0;
+}
+
+.site-map li a {
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    color: hsl(240, 2%, 79%);
+}
+
+.site-map li a:hover {
+    text-decoration: underline;
+}
+
+.site-map li a:active {
+    color: hsl(0, 0%, 100%);
+}
+
+h1, h2, h3 {
+    font-family: 'Overpass', sans-serif;
+}
+
+
+h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 70px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 0;
+}
+
+h2, h3 {
+    color: hsl(208, 49%, 24%);
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p {
+    font-family: 'Overpass', sans-serif;
+}
+
+@media screen and (max-width: 999px) {
+
+    header {
+        height: auto;
+
+        background: linear-gradient(to bottom right, hsl(13, 100%, 72%, 0.9) 0%, hsl(353, 100%, 62%, 0.9) 100%), url(images/bg-pattern-intro-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center center, center;
+        background-size: 350%;
+    }
+
+    nav {
+        z-index: 1;
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        transform: none;
+        padding: 30px 0;
+        margin: 0;
+        height: auto;
+        background-color: hsl(0, 0%, 100%); 
+        border-radius: 10px;
+
+        box-shadow: 0px 0px 20px hsl(240, 10%, 16%);
+    }
+
+    .dropdown {
+        margin: 0;
+        background: url(images/icon-arrow-dark.svg);
+        background-repeat: no-repeat;
+        background-position: right 90px center;
+    }
+
+    .dropdown:hover {
+        margin: 0;
+        background: url(images/arrow-close-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: right 90px center;
+    }
+
+    .dropbtn {
+        display: block;
+        margin: 30px auto;
+        padding: 0;
+        text-align: center;
+        color: hsl(208, 49%, 24%);
+    }
+
+    .dropbtn:hover {
+        color: hsl(207, 13%, 34%);
+        text-decoration: none;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: calc(100% - 40px);
+        margin: 10px 20px;
+        padding: 10px 0;
+        background-color: hsl(0, 0%, 90%);
+    }
+
+    .dropdown-content a {
+        text-align: center;
+    }
+
+    .sign-up {
+        width: calc(100% - 40px);
+        margin: 0 20px;
+        position: static;
+        transform: none;
+        border-top: 2px solid hsl(0, 0%, 90%);
+    }
+
+    .sign-up a {
+        display: block;
+        margin: 10px 50px;
+        padding: 10px 30px;
+        text-align: center;
+        color: hsl(208, 49%, 24%);
+        border-radius: 30px;
+    }
+
+    .sign-up .active, .sign-up a:active {
+        background: linear-gradient(to bottom right, hsl(13, 100%, 72%, 0.9) 0%, hsl(353, 100%, 62%, 0.9) 100%);
+        color: hsl(0, 0%, 100%);
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    h1 {
+        margin: 30px;
+        margin-top: 100px;
+        font-size   : 40px;
+    }
+
+    header p {
+        margin: 0 30px;
+        font-size: 25px;
+    }
+
+    .start {
+        padding-bottom: 100px;
+    }
+
+    .start a {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .editor {
+        height: auto;
+        margin: 0;
+    }
+
+    .editor div {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+
+    .editor img {
+        content: url(images/illustration-editor-mobile.svg);
+    }
+
+    .editor h2 {
+        margin: 30px;
+        margin-top: 50px;
+        font-size: 28px;
+    }
+
+    .editor p {
+        margin: 0 30px;
+        text-align: center;
+    }
+
+    .phones {
+        padding-top: 0;        
+    }
+
+    .state {
+        position: relative;
+        margin-top: 50%;
+        padding: 30px;
+        padding-top: 0;
+        padding-bottom: 100px;
+
+        background: linear-gradient(90deg, hsl(237, 17%, 21%, 0.95) 0%, hsl(237, 23%, 32%, 0.95) 100%), url(images/bg-pattern-circles-w.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0, center -300px;
+        background-size: 100%, 200%;
+    }
+
+    .state-left {
+        position: absolute;
+        top: -30%;
+    }
+
+    .state-left img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .state-right {
+        margin: 0;
+        padding-top: 50%;
+    }
+
+    .state img {
+        display: block;
+        width: 100%;
+    }
+
+    .state p {
+        margin: 30px;
+    }
+
+    .laptop {
+        height: auto;
+    }
+
+    .laptop div {
+        position: static;
+        display: block;
+        transform: none;
+    }
+
+    .laptop-left img {
+        content: url(images/illustration-laptop-mobile.svg);
+        width: 100%;
+    }
+
+
+    .laptop-right {
+        width: 100%;
+    }
+    
+    .laptop-right h3, .laptop-right p {
+        margin: 0 30px;
+    }
+
+    .laptop h3 {
+        padding: 0;
+        margin: 30px;
+    }
+
+
+    footer {
+        display: block;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    footer .logo {
+        padding-top: 50px;
+    }
+
+    footer .logo img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .site-map {
+        display: block;
+        margin-top: 50px;
+    }
+
+    .site-map ul {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+
+    .site-map li{
+        text-align: center;
+    }
+
+    h1, h2, h3, p {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        margin: 30px;
+        margin-top: 30px;
+        font-size: 26px;
+    }
+    
+}
+
+@media screen and (min-width: 450px) and (max-width:580px) {
+    .state-left {
+        margin: 0 30px;
+    }
+}
+
+@media  screen and (min-width: 581px) and (max-width: 699px) {
+    .state {
+        margin-top: 30%;
+    }
+
+    .state-left {
+        margin: 0 50px;
+    }
+
+}
+
+@media  screen and (min-width: 700px) and (max-width: 800px) {
+    .state {
+        margin-top: 25%;
+    }
+
+    .state-left {
+        margin: 0 100px;
+    }
+
+    .state-right {
+        padding-top: 50%;
+    }
+
+}
+
+@media screen and (min-width: 801px) and (max-width: 999px) {
+    .state-left {
+        margin: 0 170px;
+    }
+
+    .state-right {
+        padding-top: 40%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .top-bar {
+        margin: 0 100px;
+    }
+
+    nav {
+        padding-left: 100px;
+        width: calc(100% - 100px);
+    }
+
+    .sign-up {
+        right: 0;
+
+    }
+
+    .editor-right {
+        right: -40%;
+    }
+
+    .editor-left {
+        left: 100px;
+    }
+    
+    .state {
+        padding-left: 50px;
+        padding-right: 100px;
+    }
+
+    .state-left img {
+        width: 80%;
+    }
+
+    .state-right {
+        margin: 50px 0;
+        margin-left: 50%;
+    }
+
+    .laptop-right {
+        right: 100px;
+    }
+
+    .laptop-left {
+        left: -40%;
+    }
+    
+}
