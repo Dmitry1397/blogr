@@ -419,6 +419,7 @@ p {
 
     .dropdown {
         margin: 0;
+        padding: 10px 0;
         background: url(images/icon-arrow-dark.svg);
         background-repeat: no-repeat;
         background-position: right 90px center;
@@ -428,12 +429,16 @@ p {
         margin: 0;
         background: url(images/arrow-close-mobile.svg);
         background-repeat: no-repeat;
-        background-position: right 90px center;
+        background-position: right 90px top 35px;
+    }
+
+    .nav:hover .dropdown-content {
+        display: none;
     }
 
     .dropbtn {
         display: block;
-        margin: 30px auto;
+        margin: 20px auto;
         padding: 0;
         text-align: center;
         color: hsl(208, 49%, 24%);
