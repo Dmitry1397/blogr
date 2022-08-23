@@ -26,11 +26,11 @@
             Product
           </button>
           <div class="dropdown-content">
-            <a href="#">Overview</a>
-            <a href="#">Pricing</a>
-            <a href="#">Marketplace</a>
-            <a href="#">Features</a>
-            <a href="#">Integrations</a>
+            <a href="#" id="menu">Overview</a>
+            <a href="#" id="menu">Pricing</a>
+            <a href="#" id="menu">Marketplace</a>
+            <a href="#" id="menu">Features</a>
+            <a href="#" id="menu">Integrations</a>
           </div>
         </div>
 
@@ -39,10 +39,10 @@
             Company
           </button>
           <div class="dropdown-content">
-            <a href="#">About</a>
-            <a href="#">Team</a>
-            <a href="#">Blog</a>
-            <a href="#">Careers</a>
+            <a href="#" id="menu">About</a>
+            <a href="#" id="menu">Team</a>
+            <a href="#" id="menu">Blog</a>
+            <a href="#" id="menu">Careers</a>
           </div>
         </div>
 
@@ -51,9 +51,9 @@
             Connect
           </button>
           <div class="dropdown-content">
-            <a href="#">Contact</a>
-            <a href="#">Newsletter</a>
-            <a href="#">LinkedIn</a>
+            <a href="#" id="menu">Contact</a>
+            <a href="#" id="menu">Newsletter</a>
+            <a href="#" id="menu">LinkedIn</a>
           </div>
         </div>
 
@@ -216,6 +216,17 @@
       x.style.display = 'block';
     }
   }
+  </script>
+
+  <script>
+    var x = document.querySelector("nav");
+    const links = document.querySelectorAll('#menu');
+
+    links.forEach(element => {
+      element.addEventListener('click', () => {
+        x.style.display = 'none';
+      })
+    });
   </script>
 </body>
 </html>
